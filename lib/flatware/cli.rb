@@ -55,7 +55,7 @@ module Flatware
 
     def start_sink(jobs:, workers:, formatter:)
       $0 = 'flatware sink'
-      Process.setpgrp
+      #Process.setpgrp
       passed = Sink.start_server(
         jobs: jobs,
         formatter: Flatware::Broadcaster.new([formatter]),
